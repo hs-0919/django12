@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>list</title>
+</head>
+<body>
+<h2>직원 자료</h2>
+{% if datas  %}
+{{datas|safe}}
+{% endif %}
+<hr />
+<p> 직급별 연봉합 :</p>
+과장 : {{jik_group.sum.과장}}<br />
+대리 : {{jik_group.sum.대리}}<br />
+사원 : {{jik_group.sum.사원}}<br />
+
+<hr />
+
+{{jik_group_detail | safe}}
+
+<hr />
+<p>직급별 성별 인원수 :</p> 
+{{ctab | safe}}
+<br />
+<img src="/static/images/jik.png"/>
+
+
+</body>
+</html>
